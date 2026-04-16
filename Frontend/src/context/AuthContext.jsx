@@ -1,25 +1,79 @@
+// import { createContext, useContext, useState, useEffect } from 'react'
+
+// const AuthContext = createContext(null)
+
+// export function AuthProvider({ children }) {
+//   const [user, setUser] = useState(null)
+//   const [token, setToken] = useState(() => localStorage.getItem('ss_token'))
+//   const [loading, setLoading] = useState(true)
+
+//   useEffect(() => {
+//     const stored = localStorage.getItem('ss_user')
+//     if (stored && token) {
+//       setUser(JSON.parse(stored))
+//     }
+//     setLoading(false)
+//   }, [token])
+
+//   const login = (userData, authToken) => {
+//     setUser(userData)
+//     setToken(authToken)
+//     localStorage.setItem('ss_token', authToken)
+//     localStorage.setItem('ss_user', JSON.stringify(userData))
+//   }
+
+//   const logout = () => {
+//     setUser(null)
+//     setToken(null)
+//     localStorage.removeItem('ss_token')
+//     localStorage.removeItem('ss_user')
+//   }
+
+//   return (
+//     <AuthContext.Provider value={{ user, token, loading, login, logout, isAuthenticated: !!token }}>
+//       {children}
+//     </AuthContext.Provider>
+//   )
+// }
+
+// export const useAuth = () => {
+//   const ctx = useContext(AuthContext)
+//   if (!ctx) throw new Error('useAuth must be used within AuthProvider')
+//   return ctx
+// }
+
+
 import { createContext, useContext, useState, useEffect } from 'react'
 
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
-  const [token, setToken] = useState(() => localStorage.getItem('ss_token'))
+
+  
+  const [token, setToken] = useState(() => {
+    return localStorage.getItem('ss_token') || null
+  })
+
   const [loading, setLoading] = useState(true)
 
+  
   useEffect(() => {
-    const stored = localStorage.getItem('ss_user')
+    try {
+      const stored = localStorage.getItem('ss_user')
 
-    if (stored && token) {
-      try {
+      if (stored && stored !== "undefined" && token) {
         const parsedUser = JSON.parse(stored)
         setUser(parsedUser)
-      } catch (err) {
-        console.error("Invalid user data in localStorage, clearing...")
-        localStorage.removeItem('ss_user')
+      } else {
         setUser(null)
       }
-    } else {
+
+    } catch (err) {
+      console.error("Invalid user in localStorage:", err)
+
+  
+      localStorage.removeItem('ss_user')
       setUser(null)
     }
 
@@ -32,12 +86,10 @@ export function AuthProvider({ children }) {
 
     localStorage.setItem('ss_token', authToken)
 
-    try {
-      localStorage.setItem('ss_user', JSON.stringify(userData))
-    } catch (err) {
-      console.error("Failed to store user data")
-    }
+  
+    localStorage.setItem('ss_user', JSON.stringify(userData || null))
   }
+
 
   const logout = () => {
     setUser(null)
@@ -68,3 +120,4 @@ export const useAuth = () => {
   if (!ctx) throw new Error('useAuth must be used within AuthProvider')
   return ctx
 }
+
