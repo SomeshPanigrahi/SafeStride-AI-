@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { notFound, errorHandler } = require("./Middleware/errorMiddleware");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -7,6 +8,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+// CORS must come FIRST before routes
+app.use(cors({
+ origin: 'http://localhost:5173',
+ credentials: true
+}))
 
 app.use(express.json());
 

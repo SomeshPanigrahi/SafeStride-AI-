@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🏃‍♂️ SafeStride.AI
@@ -33,11 +34,21 @@ Built with **Node.js, Express, and MongoDB**, the system tracks running workouts
 | Runners increase distance too fast | Tracks daily load and flags spikes |
 | Injuries happen before runners notice | Predicts risk using ACWR methodology |
 | Existing apps show numbers, not decisions | Converts data into clear risk levels |
+=======
+# SafeStride AI 🏃‍♂️
+
+SafeStride AI is a **Running Load Monitoring & Injury Risk Prediction Backend System** built using Node.js, Express, and MongoDB.
+
+The system tracks running workouts, calculates training load, and predicts injury risk using sports science metrics like **Acute Load, Chronic Load, and ACWR (Acute:Chronic Workload Ratio)**.
+
+This project is built backend-first with production-level architecture.
+>>>>>>> 828270f ( Readme file added)
 
 ---
 
 ## 🚀 Tech Stack
 
+<<<<<<< HEAD
 | Layer | Technology |
 |---|---|
 | Runtime | Node.js |
@@ -47,11 +58,101 @@ Built with **Node.js, Express, and MongoDB**, the system tracks running workouts
 | API Style | REST API |
 | Testing | Postman |
 | Architecture | MVC + Services + Utils |
+=======
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* REST API
+* Postman Testing
+* MVC + Services + Utils Architecture
+
+---
+
+## 📌 Project Goal
+
+SafeStride AI helps runners monitor training load and avoid injuries by analyzing workout history using sports science formulas.
+
+Features:
+
+* Track running workouts
+* Calculate daily training load
+* Compute acute & chronic load
+* Calculate ACWR ratio
+* Predict injury risk
+* Provide dashboard analytics
+
+---
+
+## 📂 Project Structure
+
+Backend/
+
+controllers/
+
+routes/
+
+models/
+
+services/
+
+utils/
+
+middleware/
+
+config/
+
+server.js
+
+---
+
+## 🔐 Authentication APIs
+
+POST /api/auth/register
+
+POST /api/auth/login
+
+Uses JWT authentication.
+
+---
+
+## 🏃 Run APIs
+
+POST /api/runs
+
+POST /api/runs/bulk
+
+GET /api/runs
+
+PUT /api/runs/:id
+
+DELETE /api/runs/:id
+
+Daily Load formula:
+
+dailyLoad = duration × intensity
+
+---
+
+## 📊 Analytics APIs
+
+GET /api/analytics/load
+
+GET /api/analytics/weekly-load
+
+GET /api/analytics/history
+
+GET /api/analytics/risk
+
+GET /api/analytics/dashboard
+>>>>>>> 828270f ( Readme file added)
 
 ---
 
 ## 📈 Sports Science Logic
 
+<<<<<<< HEAD
 The heart of SafeStride.AI is built on proven sports science formulas:
 ```
 Daily Load    =  duration × intensity
@@ -204,11 +305,99 @@ Import the Postman collection and test all endpoints.
 - [ ] Interactive load charts
 - [ ] AI-powered risk explanations
 - [ ] Deployment (Render / Railway)
+=======
+Daily Load = duration × intensity
+
+Acute Load = last 7 days average
+
+Chronic Load = last 28 days average
+
+ACWR = acute / chronic
+
+Risk Levels:
+
+Low < 0.8
+
+Optimal 0.8 – 1.3
+
+Warning 1.3 – 1.5
+
+High > 1.5
+
+Cold start handling included.
+
+---
+
+## 🧠 Architecture
+
+Controller → HTTP layer
+
+Service → Business logic
+
+Utils → Pure calculations
+
+Model → Database
+
+Middleware → Auth & errors
+
+This makes backend scalable.
+
+---
+
+## ▶️ How to Run
+
+Clone repo
+
+npm install
+
+Create .env
+
+PORT=5000
+
+MONGO_URI=your_mongo
+
+JWT_SECRET=secret
+
+Run server
+
+npm run dev
+
+Server runs on
+
+http://localhost:5000
+
+---
+
+## 📬 Testing
+
+Use Postman to test APIs.
+
+All routes require JWT except register/login.
+
+---
+
+## 🎯 Current Status
+
+Backend: 90% complete
+
+Frontend: Starting
+
+Next:
+
+Frontend UI
+
+Charts
+
+AI risk model
+
+Deployment
+>>>>>>> 828270f ( Readme file added)
 
 ---
 
 ## 👨‍💻 Author
 
+<<<<<<< HEAD
 **Somesh Panigrahi**
 B.Tech Computer Science — KIIT, Bhubaneswar
 [GitHub](https://github.com/SomeshPanigrahi) • [LinkedIn](https://www.linkedin.com/in/somesh-panigrahi-4b1914285)
@@ -218,3 +407,7 @@ B.Tech Computer Science — KIIT, Bhubaneswar
 <div align="center">
   <i>Built for learning. Designed for production.</i>
 </div>
+=======
+SafeStride AI Project
+Backend built for learning + production practice.
+>>>>>>> 828270f ( Readme file added)

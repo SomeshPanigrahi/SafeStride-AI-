@@ -9,7 +9,7 @@ const runSchema = mongoose.Schema(
     },
     distance: {
       type: Number,
-      required: true,
+      required: false,   // earlier it was required:true
     },
     duration: {
       type: Number,
