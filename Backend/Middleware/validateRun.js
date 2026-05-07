@@ -3,9 +3,8 @@ const {
   bulkRunSchema,
 } = require("../validators/runValidators");
 
-// ==============================
-// VALIDATE SINGLE RUN
-// ==============================
+
+
 const validateRun = (req, res, next) => {
   const { error } = runSchema.validate(req.body, {
     abortEarly: true,
@@ -21,7 +20,7 @@ const validateRun = (req, res, next) => {
   next();
 };
 
-// ==============================
+
 // VALIDATE BULK RUNS
 // ==============================
 const validateBulkRuns = (req, res, next) => {

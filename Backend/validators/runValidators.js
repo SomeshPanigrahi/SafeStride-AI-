@@ -1,8 +1,8 @@
 const Joi = require("joi");
 
-// ==============================
+
 // SINGLE RUN SCHEMA
-// ==============================
+
 const runSchema = Joi.object({
   distance: Joi.number()
     .min(0)
@@ -48,9 +48,9 @@ const runSchema = Joi.object({
     }),
 });
 
-// ==============================
+
 // BULK RUN SCHEMA
-// ==============================
+
 const bulkRunSchema = Joi.array()
   .items(runSchema)
   .min(1)

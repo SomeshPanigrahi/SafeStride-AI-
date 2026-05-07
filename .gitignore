@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 
-# Environment variables (NEVER push this)
+# Environment variables (never push this)
 .env
 
 # Logs

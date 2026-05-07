@@ -9,11 +9,14 @@ connectDB();
 
 const app = express();
 
-// CORS must come FIRST before routes
+// cors
 app.use(cors({
- origin: 'http://localhost:5173',
- credentials: true
-}))
+  origin: [
+    "http://localhost:5173",
+    process.env.FRONTEND_URL
+  ],
+  credentials: true,
+}));
 
 app.use(express.json());
 
