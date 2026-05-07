@@ -26,6 +26,10 @@ const runSchema = mongoose.Schema(
     dailyLoad: {
       type: Number,
     },
+    notes: {
+  type: String,
+  default: "",
+},
   },
   {
     timestamps: true,
