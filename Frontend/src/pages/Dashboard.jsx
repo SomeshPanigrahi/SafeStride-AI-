@@ -19,6 +19,13 @@ const RISK_CONFIG = {
   high: { label: 'High Risk', color: '#ff3b5c', bg: 'rgba(255,59,92,0.1)', border: 'rgba(255,59,92,0.3)' },
 }
 
+const getRiskLevel = (acwr) => {
+  if (acwr < 0.8) return "low"
+  if (acwr <= 1.3) return "optimal"
+  if (acwr <= 1.5) return "warning"
+  return "high"
+}
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null
   return (
@@ -54,7 +61,7 @@ export default function Dashboard() {
         acwr: d.summary?.acwr ?? 0,
         acuteLoad: d.summary?.acuteLoad ?? 0,
         chronicLoad: d.summary?.chronicLoad ?? 0,
-        riskLevel: d.summary?.riskLevel?.toLowerCase() || 'optimal',
+       riskLevel: getRiskLevel(d.summary?.acwr ?? 0),
         totalRuns: d.totalRuns ?? 0,
         weeklyLoad: d.weeklyLoad ?? [],
         history: d.history ?? [],
