@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    process.env.FRONTEND_URL
+    "https://safe-stride-ai.vercel.app"
   ],
   credentials: true,
 }));
