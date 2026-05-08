@@ -17,7 +17,7 @@ const { protect } = require("../Middleware/authMiddleware");
 const {
   validateRun,
   validateBulkRuns,
-} = require("../middleware/validateRun");
+} = require("../Middleware/validateRun");
 
 // ==============================
 // ROUTES
