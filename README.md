@@ -11,19 +11,19 @@
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-![Login Page](./screenshot-login.png)
+![Login Page](./Assets/Screenshot%202026-05-10%20121554.png)
 *Split-screen auth UI with live ACWR display and feature highlights*
 
 ### 📊 Dashboard — KPI Cards
-![Dashboard KPIs](./screenshot-dashboard-kpi.png)
+![Dashboard KPIs](./Assets/Screenshot%202026-05-10%20120220.png)
 *Real-time ACWR score with risk badge, acute load, chronic load, and total sessions*
 
 ### 📈 Dashboard — Charts & AI Insight
-![Dashboard Charts](./screenshot-dashboard-charts.png)
+![Dashboard Charts](./Assets/Screenshot%202026-05-10%20120243.png)
 *Weekly load bar chart, 28-day history area chart, and AI Coach personalized insight*
 
 ### 🏃 Run Log
-![Run Log](./screenshot-runlog.png)
+![Run Log](./Assets/Screenshot%202026-05-10%20121500.png)
 *Full training history with intensity badges, load scores, and sort controls*
 
 ---
