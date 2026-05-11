@@ -322,52 +322,12 @@ Login → Compare bcrypt → Issue JWT → Frontend stores token
 Request → Axios interceptor attaches Bearer token → protect middleware verifies
 ```
 
----
-
-## Future Improvements
-
-### Features
-- [ ] Wearable integration (Garmin / Strava sync)
-- [ ] OAuth login (Google)
-- [ ] Push notifications for recovery alerts
-- [ ] Injury forecasting ML model
-- [ ] Conversational AI coach
-
-### DevOps
-- [ ] Docker containerization
-- [ ] CI/CD pipeline with GitHub Actions
-- [ ] Centralized logging (Winston / Datadog)
-
-### Performance
-- [ ] Query pagination
-- [ ] MongoDB aggregation pipelines
-- [ ] Redis caching for dashboard analytics
-- [ ] Database indexing `{ user: 1, date: -1 }`
-
-### Security
-- [ ] HTTP-only cookies for JWT
-- [ ] Refresh token rotation
-- [ ] `helmet` middleware
-- [ ] Rate limiting
-
-### Testing
-- [ ] Jest unit tests
-- [ ] Supertest API tests
-- [ ] React Testing Library
-
----
-
 ## Resume Description
 
 > Built SafeStride AI, a full-stack MERN sports analytics platform that monitors athlete workload using ACWR (Acute:Chronic Workload Ratio) to predict injury risk and optimize training balance. Implemented JWT authentication, Joi-based backend validation, AI-generated coaching insights, analytics dashboards with Recharts, and fully deployed the platform using Render, Vercel, and MongoDB Atlas.
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 <div align="center">
   <strong>Built with ❤️ for athletes who train smart, not just hard.</strong>
