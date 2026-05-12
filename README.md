@@ -8,27 +8,27 @@
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🔐 Login Page
+###  Login Page
 ![Login Page](./Assets/Screenshot%202026-05-10%20121554.png)
 *Split-screen auth UI with live ACWR display and feature highlights*
 
-### 📊 Dashboard — KPI Cards
+###  Dashboard — KPI Cards
 ![Dashboard KPIs](./Assets/Screenshot%202026-05-10%20120220.png)
 *Real-time ACWR score with risk badge, acute load, chronic load, and total sessions*
 
-### 📈 Dashboard — Charts & AI Insight
+###  Dashboard — Charts & AI Insight
 ![Dashboard Charts](./Assets/Screenshot%202026-05-10%20120243.png)
 *Weekly load bar chart, 28-day history area chart, and AI Coach personalized insight*
 
-### 🏃 Run Log
+###  Run Log
 ![Run Log](./Assets/Screenshot%202026-05-10%20121500.png)
 *Full training history with intensity badges, load scores, and sort controls*
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [About the Project](#about-the-project)
 - [Features](#features)
@@ -48,11 +48,11 @@
 SafeStride AI solves a critical problem in sports science: **athletes often train either too hard or too little without understanding workload balance.** This leads to overtraining, injury risk, poor recovery, and inconsistent performance.
 
 SafeStride AI combines:
-- 📊 Training data collection & logging
-- 🧮 Sports-science workload analytics (ACWR)
-- 📈 Interactive visualization dashboards
-- 🤖 AI-generated personalized coaching insights
-- 🚨 Injury risk prediction & alerts
+-  Training data collection & logging
+-  Sports-science workload analytics (ACWR)
+-  Interactive visualization dashboards
+-  AI-generated personalized coaching insights
+-  Injury risk prediction & alerts
 
 ### Target Users
 
@@ -66,22 +66,22 @@ SafeStride AI combines:
 
 ## Features
 
-### 🔬 ACWR-Based Injury Risk Prediction
+###  ACWR-Based Injury Risk Prediction
 Implements real sports-science methodology — calculating acute (7-day) and chronic (28-day) workload ratios to assess injury probability from sudden training spikes.
 
-### 🤖 AI Coaching Insights
+###  AI Coaching Insights
 Generates personalized feedback, workload explanations, and training suggestions — transforming raw data into an intelligent training assistant.
 
-### 📊 Modern Sports Analytics Dashboard
+###  Modern Sports Analytics Dashboard
 - KPI cards (ACWR, acute load, chronic load)
 - Dynamic risk color-coded badges
 - Workload trend charts (Area & Bar)
 - Responsive, data-driven UI states
 
-### 🔐 Secure Authentication
+###  Secure Authentication
 JWT-based stateless authentication with bcrypt password hashing and protected API routes.
 
-### ☁️ Full Production Deployment
+###  Full Production Deployment
 - Frontend → Vercel
 - Backend → Render
 - Database → MongoDB Atlas
@@ -241,10 +241,10 @@ User Action → React Component → Axios (JWT attached)
 
 | Method | Endpoint | Description | Auth |
 |---|---|---|---|
-| POST | `/api/runs` | Log a new training run | ✅ |
-| GET | `/api/runs` | Get all runs for user | ✅ |
-| PUT | `/api/runs/:id` | Update a run | ✅ |
-| DELETE | `/api/runs/:id` | Delete a run | ✅ |
+| POST | `/api/runs` | Log a new training run |  |
+| GET | `/api/runs` | Get all runs for user |  |
+| PUT | `/api/runs/:id` | Update a run |  |
+| DELETE | `/api/runs/:id` | Delete a run |  |
 
 ### Analytics Endpoints
 
@@ -301,7 +301,7 @@ origin: [
 ]
 ```
 
-> ⚠️ **Important:** Linux servers (Render) are case-sensitive. Ensure all import paths match exact filenames — `AuthContext.jsx` ≠ `Authcontext.jsx`.
+>  **Important:** Linux servers (Render) are case-sensitive. Ensure all import paths match exact filenames — `AuthContext.jsx` ≠ `Authcontext.jsx`.
 
 ---
 
